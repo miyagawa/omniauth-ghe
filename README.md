@@ -34,11 +34,9 @@ end
 
 * [omniauth-github](https://github.com/intridea/omniauth-github)
 
-## License
+## Author
 
 Copyright 2012- Tatsuhiko Miyagawa
-
-This software is licensed under the MIT license.
 
 ## Contributing
 

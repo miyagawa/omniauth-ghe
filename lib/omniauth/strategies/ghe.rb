@@ -7,11 +7,11 @@ module OmniAuth
       option :url, nil
 
       def client_options
-        Hashie::Mash.new(
+        {
           :site => "#{options.url}/api/v3",
-          :authorize_url => "#{options.url}/api/v3/oauth/authorize",
-          :token_url => "#{options.url}/api/v3/oauth/access_token"
-        )
+          :authorize_url => "#{options.url}/login/oauth/authorize",
+          :token_url => "#{options.url}/login/oauth/access_token"
+        }
       end
 
       def client

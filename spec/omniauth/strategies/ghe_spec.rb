@@ -16,15 +16,15 @@ describe OmniAuth::Strategies::GHE do
 
   context "client options" do
     it 'should have correct site' do
-      subject.client_options.site.should eq("https://github.example.com/api/v3")
+      subject.client_options[:site].should eq("https://github.example.com/api/v3")
     end
 
     it 'should have correct authorize url' do
-      subject.client_options.authorize_url.should eq('https://github.example.com/api/v3/oauth/authorize')
+      subject.client_options[:authorize_url].should eq('https://github.example.com/login/oauth/authorize')
     end
 
     it 'should have correct token url' do
-      subject.client_options.token_url.should eq('https://github.example.com/api/v3/oauth/access_token')
+      subject.client_options[:token_url].should eq('https://github.example.com/api/login/access_token')
     end
   end
 
