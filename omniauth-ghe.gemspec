@@ -5,7 +5,7 @@ require 'omniauth-ghe/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "omniauth-ghe"
-  gem.version       = Omniauth::Ghe::VERSION
+  gem.version       = OmniAuth::GHE::VERSION
   gem.authors       = ["Tatsuhiko Miyagawa"]
   gem.email         = ["miyagawa@bulknews.net"]
   gem.description   = %q{omniauth strategy for Github Enterprise}
