@@ -31,7 +31,7 @@ module OmniAuth
           'name' => raw_info['name'],
           'image' => raw_info['avatar_url'],
           'urls' => {
-            'GitHub Enterprise' => "https://#{url}/#{raw_info['login']}",
+            'GitHub Enterprise' => "https://#{options.url}/#{raw_info['login']}",
             'Blog' => raw_info['blog'],
           },
         }
@@ -43,7 +43,7 @@ module OmniAuth
 
       def raw_info
         access_token.options[:mode] = :query
-        @raw_info ||= access_token.get('/user').parsed
+        @raw_info ||= access_token.get('/api/v3/user').parsed
       end
 
       def email
@@ -52,7 +52,7 @@ module OmniAuth
 
       def emails
         access_token.options[:mode] = :query
-        @emails ||= access_token.get('/user/emails').parsed
+        @emails ||= access_token.get('/api/v3/user/emails').parsed
       end
 
       def email_access_allowed?

@@ -1,4 +1,5 @@
 $:.unshift "./lib"
+$:.unshift "../omniauth-oauth2/lib"
 
 require 'omniauth'
 require 'omniauth-ghe'
